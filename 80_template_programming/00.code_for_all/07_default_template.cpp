@@ -4,6 +4,7 @@
 /* 
  * nontype template에 타입이 아닌 인자의 기본값을 결정지을 수 있음.
  * 타입도 디폴트로 지정이 가능함.
+ * Template argument deduction은 링크(https://en.cppreference.com/w/cpp/language/template_argument_deduction)를 참고할 것.
  */
 template <typename T, int num = 5>
 T add_sum(T t) {
