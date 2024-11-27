@@ -7,7 +7,8 @@ class Complex
 public:
   Complex(const T& r, const T& i) : real(r), image(i){}
 
-  // generic constructor
+  // generic constructor: 서로 다른 타입의 인스턴스에 대한 복사생성자
+  // 인자로 넘어오는 인스턴스의 템플릿을 별도로 작성주면 끝!
   template<typename U> Complex(const Complex<U>& c): real(c.real), image(c.image){}
   template<typename> friend class Complex;
 };
