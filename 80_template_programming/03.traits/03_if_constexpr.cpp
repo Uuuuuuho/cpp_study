@@ -1,11 +1,11 @@
-#include <iostream.
+#include <iostream>
 
 /* printv 함수 템플랫
  * 인자로 전달된 변수의 값을 출력하는 함수(디버깅용)
  * 인자의 타입이 포인터면 구수값(메모리 주소)와 메모리에 있는 값(*value)"도 출력
  */
-template <typename T> struct is_pointer     { enum value = false; }
-template <typename T> struct is_pointer<T*> { enum value = true;  }
+template <typename T> struct is_pointer     { enum {value = false}; };
+template <typename T> struct is_pointer<T*> { enum {value = true} ; };
 
 template <typename T>
 void printv(const T& value) {

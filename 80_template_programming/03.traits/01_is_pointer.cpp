@@ -27,7 +27,7 @@ template<typename T> struct is_pointer {
 
 template<typename T> struct is_pointer<T*> {
     enum { value = true };
-}
+};
 
 template <typename T>
 void fn(const T& arg) {

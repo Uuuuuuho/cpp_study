@@ -13,7 +13,7 @@
  * C++11 => std::is_pointer<T>::value
  * C++17 => std::is_pointer_v<T>
  */
-tempalte <typename T>
+template <typename T>
 void fn(const T& arg) {
     bool b1 = std::is_pointer<T>::value;
     bool b2 = std::is_pointer_v(T);

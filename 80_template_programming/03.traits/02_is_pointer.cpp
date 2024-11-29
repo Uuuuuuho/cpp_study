@@ -8,6 +8,7 @@ void fn(T& arg) {
 }
 
 int main() {
+    
     int n = 0;
     int x[3] = {1,2,3};
     const int c = 0;

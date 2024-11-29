@@ -8,7 +8,7 @@ int main() {
     std::string s2 = s1; // deep copy
 
     std::string_view sv = s1; // shallow copy
-    std::cout << std::ranges::enalbe_borrowed_range<std::string> << std::endl; // 0
+    std::cout << std::ranges::enable_borrowed_range<std::string> << std::endl; // 0
     std::cout << std::ranges::enable_borrowed_range<std::string_view> << std::endl; // 1
 }
 
