@@ -8,7 +8,7 @@
 /* 
  * template의 종류
  * 1. function template
- * 2. calss template
+ * 2. class template
  * 3. variable template
  * 4. using template
  */
