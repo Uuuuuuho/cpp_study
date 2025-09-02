@@ -11,6 +11,8 @@
         "regex": "cpp",
         "valarray": "cpp",
         "utility": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "ostream": "cpp",
+        "new": "cpp"
     }
 }

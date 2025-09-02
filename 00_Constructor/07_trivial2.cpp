@@ -1,6 +1,21 @@
 ﻿#include <iostream>
 #include <type_traits>
 
+// Why "trivial" default constructors matter:
+// - Performance: trivial construction can be elided or implemented as
+//   simple memory operations (memset/memcpy), which is faster than
+//   calling user-defined code for each object.
+// - Interoperability/ABI: POD-like/trivial types have predictable memory
+//   layout and construction semantics, useful when interfacing with C
+//   or low-level code and for serialization.
+// - Initialization guarantees: trivial types are often safe to bulk-
+//   initialize (e.g., in arrays) and allow certain optimizations in
+//   containers and algorithms.
+// - Use-case: prefer trivial/value members for small, copyable types;
+//   use non-trivial constructors only when initialization logic is
+//   necessary.
+
+
 struct TrivialDefaultCtor   // true
 {
     int data;

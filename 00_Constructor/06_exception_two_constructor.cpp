@@ -18,7 +18,7 @@ public:
     // 예외 가능성이 있는 어떠한 작업도 하지 않음.
   }
   void Construct(){
-    p = new Resource;
+    p = new Resource; // Resource::Resource() 호출.
     // 생성자가 아니므로 이 함수 안에서는 가상함수도 호출할 수 있음.
     throw 1;
   }
