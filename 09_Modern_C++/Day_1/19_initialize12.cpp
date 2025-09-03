@@ -14,7 +14,7 @@ int main()
 {
     /* 
         Problem 1. Different initialization methods.
-        => Use baces.
+        => Use braces.
     */
    int n1{10};
    int n2{10};

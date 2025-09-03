@@ -7,8 +7,13 @@ class Thread
 public:
   void run()
   {
-    // 1. 4번째 인자로 전달되는 this가 핵심.
-    CreateThread(0, 0, threadMain,(void*)this, 0,0);
+    // Start a native thread and pass the current object pointer as the
+    // thread argument. The 4th parameter is a void* passed to the thread
+    // entry function. Casting `this` to void* allows the static thread
+    // entry to recover the object and call its instance method.
+    // Note: this requires that the Thread object stays alive until the
+    // spawned thread no longer uses it.
+    CreateThread(0, 0, threadMain, (void*)this, 0, 0);
   }
   static DWORD __stdcall threadMain(void* p)
   {
@@ -16,7 +21,11 @@ public:
     self->Main(); // Main(self)
     return 0;
   }
-  virtual void Main(){} // void Main(Thread* const this)
+  // The thread entry calls this virtual method on the recovered object.
+  // Making threadMain static avoids a hidden `this` parameter and matches
+  // the C-style callback signature required by CreateThread.
+  // Override Main() in derived classes to implement thread work.
+  virtual void Main(){} // instance method called by the thread
 };
 // 라이브러리 사용자 코드
 class MyThread : public Thread

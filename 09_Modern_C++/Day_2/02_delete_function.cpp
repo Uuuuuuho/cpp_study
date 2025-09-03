@@ -16,7 +16,7 @@ public:
         private:
             Point(const Point& p);
         2. Since C++11
-        => "function delte"
+        => "function delete"
         Point(const Point&) delete;
     */
 };

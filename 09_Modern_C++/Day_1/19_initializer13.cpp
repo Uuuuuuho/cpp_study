@@ -1,5 +1,5 @@
 /*  Aggregate type 
-    => Brace initializer with out constructor.
+    => Brace initializer without constructor.
     => C array, struct, etc.
 */
 

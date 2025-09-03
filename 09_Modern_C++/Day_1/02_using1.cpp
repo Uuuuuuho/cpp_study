@@ -4,7 +4,7 @@ typedef std::unordered_set<int>    SETI;
 typedef std::unordered_set<double> SETD;
 
 // Can I do like below?
-// => Nickname for tmeplate like below not type.
+// => Nickname for template like below not type.
 // typedef std::unordered_set SET; // error
 
 // typedef     : 타입에 대한 별명 만 가능

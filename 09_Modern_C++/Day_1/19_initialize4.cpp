@@ -15,7 +15,7 @@ void f2(Point pt) {}
 int main()
 {
 	f1(3);      /* 
-                    Finally, meaningn of "int n = 3".
+                    Finally, meaning of "int n = 3".
                     Copy constructor when passing arguments.
                 */
     f1({3});    /* Available since C++11. "int n = {3}". */

@@ -18,6 +18,6 @@ int main()
   std::cout << "=== Parent Pointer Child ===" << std::endl;
   {
     Parent *p = new Child();
-    delete p;
+    delete p; // No child destructor called
   }
 }

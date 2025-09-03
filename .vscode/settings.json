@@ -13,6 +13,8 @@
         "utility": "cpp",
         "type_traits": "cpp",
         "ostream": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "functional": "cpp",
+        "__config": "cpp"
     }
 }

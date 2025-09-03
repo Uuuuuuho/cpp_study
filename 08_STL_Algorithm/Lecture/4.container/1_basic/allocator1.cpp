@@ -1,9 +1,9 @@
 
-/* C++에서 메몰를 할당/해지하는 방법은 다양하다.
+/* C++에서 메모리를 할당/해지하는 방법은 다양하다.
     - new/delete
     - malloc/free
     - 각 OS가 제공하는 system call 사용
-    - memory polling 기술 사용
+    - memory pooling 기술 사용
 
   vector의 resize 멤버 함수에서 "new/delete를 직접 사용"했다면
     - vector 사용자가 다른 방식으로 변경할 수 없음.
